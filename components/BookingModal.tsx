@@ -38,15 +38,12 @@ export default function BookingModal({ open, onClose }: Props) {
     e.preventDefault();
     setLoading(true);
 
-    /*
-      ─── To actually send emails, use Formspree (free, no backend needed) ───
-      1. Sign up at https://formspree.io
-      2. Create a new form — copy your endpoint (looks like: xpwznkab)
-      3. Replace the fetch URL below with your endpoint:
-         await fetch("https://formspree.io/f/YOUR_ID", { ... })
-      4. That's it — submissions go straight to Nika's email.
-    */
-    await new Promise((r) => setTimeout(r, 900)); // simulates network call
+    const data = new FormData(e.currentTarget);
+    await fetch("https://formspree.io/f/xyknadqy", {
+      method: "POST",
+      body: data,
+      headers: { Accept: "application/json" },
+    });
 
     setLoading(false);
     setSubmitted(true);
