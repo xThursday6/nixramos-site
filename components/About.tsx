@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 const stats = [
   { num: "52+",   label: "Weekends booked" },
   { num: "100+",  label: "Happy clients"   },

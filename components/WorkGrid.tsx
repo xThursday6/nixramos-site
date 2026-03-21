@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 // ─── Edit this array to update your gallery grid ───────────────────────────
 // Each item needs: an image in public/images/, a title, and a link to Pixieset
 const works = [

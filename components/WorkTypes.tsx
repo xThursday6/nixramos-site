@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 // ─── Edit these to match her categories ──────────────────────────────────────
 const types = [
   { label: "Portraits",   src: "/images/type-portraits.jpg",   bg: "from-[#e2d6c0] to-[#c8b898]" },
