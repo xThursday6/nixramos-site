@@ -33,8 +33,8 @@ export default function Nav() {
           <Image
             src="/images/Logo.png"
             alt="Nix Ramos"
-            width={72}
-            height={32}
+            width={110}
+            height={48}
             className="object-contain"
             priority
           />

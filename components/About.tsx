@@ -32,12 +32,12 @@ export default function About() {
       </div>
 
       {/* Portrait */}
-      <div className="relative bg-[#111008] min-h-[320px]">
+      <div className="relative bg-[#111008] min-h-[420px] md:min-h-[560px]">
         <Image
           src="/images/Nika-portrait.JPG"
           alt="Nika Ramos"
           fill
-          className="object-cover object-bottom"
+          className="object-cover object-[center_80%]"
         />
       </div>
     </div>

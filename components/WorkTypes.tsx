@@ -21,7 +21,7 @@ export default function WorkTypes() {
         {types.map((t) => (
           <div
             key={t.label}
-            className="relative h-[340px] overflow-hidden rounded-t-[10px] group cursor-pointer"
+            className="relative h-[340px] md:h-auto md:aspect-[4/3] overflow-hidden rounded-t-[10px] group cursor-pointer"
           >
             <Image
               src={t.src}
