@@ -22,7 +22,7 @@ const works = [
     alt: "Wellness Retreat",
     label: "Wellness Retreat",
     href: "https://nixramos.pixieset.com",
-    position: "object-center",
+    position: "object-bottom",
   },
   {
     src: "/images/Pickleball.png",
