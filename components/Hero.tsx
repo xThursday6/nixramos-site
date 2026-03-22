@@ -58,13 +58,6 @@ export default function Hero() {
             priority
           />
 
-          {/* Floating badge */}
-          <div className="absolute bottom-8 -left-px bg-bg border border-ink/15 px-5 py-4 z-10">
-            <div className="font-display text-[30px] font-normal text-ink leading-none">100+</div>
-            <div className="text-[10px] font-medium tracking-[0.16em] uppercase text-muted mt-1.5">
-              Happy clients
-            </div>
-          </div>
         </div>
       </section>
 

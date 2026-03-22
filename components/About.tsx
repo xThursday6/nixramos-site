@@ -1,11 +1,5 @@
 import Image from "next/image";
 
-const stats = [
-  { num: "52+",   label: "Weekends booked" },
-  { num: "100+",  label: "Happy clients"   },
-  { num: "★★★★★", label: "Every review"    },
-];
-
 export default function About() {
   return (
     <div id="about" className="grid grid-cols-1 md:grid-cols-2 bg-ink text-bg">
@@ -35,19 +29,6 @@ export default function About() {
           is a reminder that your story deserves to be seen.
         </p>
 
-        {/* Stats */}
-        <div className="flex gap-10 pt-7 mt-2 border-t border-bg/10">
-          {stats.map((s) => (
-            <div key={s.label}>
-              <div className="font-display text-[32px] font-normal text-bg leading-none">
-                {s.num}
-              </div>
-              <div className="text-[10px] font-medium tracking-[0.16em] uppercase text-accent mt-1.5">
-                {s.label}
-              </div>
-            </div>
-          ))}
-        </div>
       </div>
 
       {/* Portrait */}
@@ -56,7 +37,7 @@ export default function About() {
           src="/images/Nika-portrait.JPG"
           alt="Nika Ramos"
           fill
-          className="object-cover object-top"
+          className="object-cover object-bottom"
         />
       </div>
     </div>
