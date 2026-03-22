@@ -24,7 +24,9 @@ export default function Nav() {
 
         {/* Centred logo */}
         <a
-          href="#"
+          href="https://www.instagram.com/nix_portraits?igsh=MXQ5ODQzaHNwcmd2dw=="
+          target="_blank"
+          rel="noopener noreferrer"
           className="absolute left-1/2 -translate-x-1/2 font-sans text-[22px] font-normal tracking-wider text-ink"
         >
           nix.

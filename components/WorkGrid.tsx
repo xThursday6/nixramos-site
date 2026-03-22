@@ -1,46 +1,45 @@
+import Image from "next/image";
+
 // ─── Edit this array to update your gallery grid ───────────────────────────
-// Each item needs: an image in public/images/, a title, and a link to Pixieset
 const works = [
   {
-    src: "/images/work-1.jpg",
-    alt: "Jun & Momo Pre-wedding",
-    label: "Jun & Momo · Pre-wedding",
-    href: "https://nixramos.pixieset.com/junandmomo/",
-    tall: true, // spans 2 rows — use your best portrait-oriented shot here
+    src: "/images/Jun%20%26%20Momo%20Pre-Wedding.JPG",
+    alt: "Jun & Momo Pre-Wedding",
+    label: "Jun & Momo · Pre-Wedding",
+    href: "https://nixramos.pixieset.com",
+    tall: true,
   },
   {
-    src: "/images/work-2.jpg",
+    src: "/images/daba%20daba%20anniversary.png",
     alt: "Daba Daba Anniversary",
     label: "Daba Daba · Anniversary",
-    href: "https://nixramos.pixieset.com/dabadabaanniversaryforacause/",
-  },
-  {
-    src: "/images/work-3.jpg",
-    alt: "Heart Alchemy Event",
-    label: "Heart Alchemy · Event",
     href: "https://nixramos.pixieset.com",
   },
   {
-    src: "/images/work-4.jpg",
-    alt: "Collab Corner",
-    label: "Collab Corner",
+    src: "/images/Wellness%20Retreat.jpg",
+    alt: "Wellness Retreat",
+    label: "Wellness Retreat",
     href: "https://nixramos.pixieset.com",
   },
   {
-    src: "/images/work-5.jpg",
-    alt: "In the Quiet Corners Japan",
-    label: "In the Quiet Corners · Japan",
+    src: "/images/Pickleball.png",
+    alt: "Pickleball",
+    label: "Pickleball",
     href: "https://nixramos.pixieset.com",
   },
-];
-
-// Placeholder tile colours (used until real photos are added)
-const placeholderBg = [
-  "from-[#e4d6bc] to-[#caba9a]",
-  "from-[#d2cab6] to-[#beb0a0]",
-  "from-[#cac0b0] to-[#b8aea0]",
-  "from-[#dcd4c0] to-[#cac0ac]",
-  "from-[#d4ccb8] to-[#c4baaa]",
+  {
+    src: "/images/Daba%20-%20Sunrise%20Yoga%20for%20a%20Cause.png",
+    alt: "Daba · Sunrise Yoga for a Cause",
+    label: "Daba · Sunrise Yoga for a Cause",
+    href: "https://nixramos.pixieset.com",
+  },
+  {
+    src: "/images/Mama%20Joy.png",
+    alt: "Mama Joy",
+    label: "Mama Joy",
+    href: "https://nixramos.pixieset.com",
+    wide: true,
+  },
 ];
 
 export default function WorkGrid() {
@@ -69,12 +68,12 @@ export default function WorkGrid() {
         </a>
       </div>
 
-      {/* Grid: 3 cols, 2 rows — first item spans both rows */}
+      {/* Grid: 3 cols — first item spans 2 rows, last item spans full width */}
       <div
         className="grid gap-1.5"
         style={{
           gridTemplateColumns: "1.5fr 1fr 1fr",
-          gridTemplateRows: "280px 200px",
+          gridTemplateRows: "280px 200px 200px",
         }}
       >
         {works.map((w, i) => (
@@ -84,19 +83,18 @@ export default function WorkGrid() {
             target="_blank"
             rel="noopener noreferrer"
             className="relative overflow-hidden group block"
-            style={w.tall ? { gridRow: "span 2" } : {}}
+            style={
+              w.tall ? { gridRow: "span 2" } :
+              w.wide ? { gridColumn: "1 / -1" } :
+              {}
+            }
           >
-            {/* Real photo — uncomment once images are in public/images/ */}
-            {/* <Image src={w.src} alt={w.alt} fill className="object-cover group-hover:scale-105 transition-transform duration-700" /> */}
-
-            {/* Placeholder (remove once real photos added) */}
-            <div
-              className={`w-full h-full bg-gradient-to-br ${placeholderBg[i]} flex items-center justify-center group-hover:scale-[1.03] transition-transform duration-700`}
-            >
-              <span className="text-[10px] tracking-[0.16em] uppercase text-ink/20">
-                {w.alt}
-              </span>
-            </div>
+            <Image
+              src={w.src}
+              alt={w.alt}
+              fill
+              className="object-cover group-hover:scale-105 transition-transform duration-700"
+            />
 
             {/* Hover overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-[rgba(20,16,10,0.72)] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-5">

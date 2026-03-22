@@ -19,7 +19,7 @@ const dmSerif = DM_Serif_Display({
 });
 
 export const metadata: Metadata = {
-  title: "nix. — Nika Ramos Photography · Davao",
+  title: "Nix Ramos Photography",
   description:
     "Davao-based photographer capturing portraits, engagements, and events. Your story, caught in its best light.",
   openGraph: {

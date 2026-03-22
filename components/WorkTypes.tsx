@@ -1,8 +1,10 @@
+import Image from "next/image";
+
 // ─── Edit these to match her categories ──────────────────────────────────────
 const types = [
-  { label: "Portraits",   src: "/images/type-portraits.jpg",   bg: "from-[#e2d6c0] to-[#c8b898]" },
-  { label: "Events",      src: "/images/type-events.jpg",      bg: "from-[#d8e2d4] to-[#bcceb8]" },
-  { label: "Engagement",  src: "/images/type-engagement.jpg",  bg: "from-[#d4d8e2] to-[#b8bece]" },
+  { label: "Portraits",  src: "/images/Portraits.png",  alt: "Portraits" },
+  { label: "Events",     src: "/images/Events.png",     alt: "Events" },
+  { label: "Engagement", src: "/images/Engagement.png", alt: "Engagement" },
 ];
 
 export default function WorkTypes() {
@@ -21,17 +23,12 @@ export default function WorkTypes() {
             key={t.label}
             className="relative h-[340px] overflow-hidden rounded-t-[10px] group cursor-pointer"
           >
-            {/* Real photo — uncomment once images are in public/images/ */}
-            {/* <Image src={t.src} alt={t.label} fill className="object-cover group-hover:scale-105 transition-transform duration-700" /> */}
-
-            {/* Placeholder */}
-            <div
-              className={`w-full h-full bg-gradient-to-br ${t.bg} flex items-center justify-center group-hover:scale-[1.03] transition-transform duration-700`}
-            >
-              <span className="text-[10px] tracking-[0.16em] uppercase text-ink/20">
-                Your photo
-              </span>
-            </div>
+            <Image
+              src={t.src}
+              alt={t.alt}
+              fill
+              className="object-cover group-hover:scale-105 transition-transform duration-700"
+            />
 
             {/* Dark bottom fade for label readability */}
             <div className="absolute inset-0 bg-gradient-to-t from-[rgba(20,16,10,0.5)] via-transparent to-transparent" />

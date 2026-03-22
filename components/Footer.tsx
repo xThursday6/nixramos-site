@@ -1,7 +1,6 @@
 // ─── Update these with Nika's real social media links ────────────────────────
 const links = [
-  { label: "Instagram",       href: "https://instagram.com/" },
-  { label: "Facebook",        href: "https://facebook.com/"  },
+  { label: "Instagram",        href: "https://www.instagram.com/nix_portraits?igsh=MXQ5ODQzaHNwcmd2dw==" },
   { label: "Client galleries", href: "https://nixramos.pixieset.com" },
 ];
 

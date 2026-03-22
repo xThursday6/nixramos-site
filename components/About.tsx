@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const stats = [
   { num: "52+",   label: "Weekends booked" },
   { num: "100+",  label: "Happy clients"   },
@@ -49,33 +51,13 @@ export default function About() {
       </div>
 
       {/* Portrait */}
-      <div className="relative bg-[#111008] min-h-[320px] flex items-center justify-center">
-        {/*
-          TO ADD YOUR PHOTO:
-          1. Save it as: public/images/nika-portrait.jpg
-          2. Replace the placeholder div with:
-
-          <Image
-            src="/images/nika-portrait.jpg"
-            alt="Nika Ramos"
-            fill
-            className="object-cover object-top"
-          />
-        */}
-        <div className="flex flex-col items-center gap-4 text-bg/20">
-          <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-            <circle cx="24" cy="16" r="9" stroke="currentColor" strokeWidth="1.5" />
-            <path
-              d="M6 42c0-9.941 8.059-18 18-18s18 8.059 18 18"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-            />
-          </svg>
-          <span className="text-[10px] tracking-[0.18em] uppercase">
-            Add nika-portrait.jpg
-          </span>
-        </div>
+      <div className="relative bg-[#111008] min-h-[320px]">
+        <Image
+          src="/images/Nika-portrait.JPG"
+          alt="Nika Ramos"
+          fill
+          className="object-cover object-top"
+        />
       </div>
     </div>
   );
