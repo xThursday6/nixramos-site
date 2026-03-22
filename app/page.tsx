@@ -1,7 +1,6 @@
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import Marquee from "@/components/Marquee";
-import WorkGrid from "@/components/WorkGrid";
 import WorkTypes from "@/components/WorkTypes";
 import About from "@/components/About";
 import Testimonials from "@/components/Testimonials";
@@ -14,7 +13,6 @@ export default function Home() {
       <Nav />
       <Hero />
       <Marquee />
-      <WorkGrid />
       <WorkTypes />
       <About />
       <Testimonials />
