@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 import BookingModal from "./BookingModal";
 
 export default function Hero() {
@@ -49,27 +50,13 @@ export default function Hero() {
 
         {/* Image side */}
         <div className="relative bg-[#e0d4bc] min-h-[360px] md:min-h-0 overflow-hidden order-first md:order-last">
-          {/*
-            TO ADD YOUR PHOTO:
-            1. Save it as: public/images/hero.jpg
-            2. Replace the placeholder div below with:
-
-            <Image
-              src="/images/hero.jpg"
-              alt="Nika Ramos Photography"
-              fill
-              className="object-cover"
-              priority
-            />
-          */}
-          <div className="w-full h-full flex flex-col items-center justify-center gap-3 min-h-[360px] bg-gradient-to-br from-[#ecdfc6] via-[#d4c4a0] to-[#c8b488] text-ink/25">
-            <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
-              <rect x="4" y="9" width="36" height="28" rx="4" stroke="currentColor" strokeWidth="1.5" />
-              <circle cx="22" cy="23" r="8" stroke="currentColor" strokeWidth="1.5" />
-              <path d="M15 9l2.5-4h9L29 9" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
-            </svg>
-            <span className="text-[10px] tracking-[0.2em] uppercase">Add hero.jpg to public/images/</span>
-          </div>
+          <Image
+            src="/images/Hero.JPG"
+            alt="Nika Ramos Photography"
+            fill
+            className="object-cover"
+            priority
+          />
 
           {/* Floating badge */}
           <div className="absolute bottom-8 -left-px bg-bg border border-ink/15 px-5 py-4 z-10">

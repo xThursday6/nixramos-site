@@ -3,42 +3,40 @@ import Image from "next/image";
 // ─── Edit this array to update your gallery grid ───────────────────────────
 const works = [
   {
-    src: "/images/Jun%20%26%20Momo%20Pre-Wedding.JPG",
+    src: "/images/jun-momo-pre-wedding.JPG",
     alt: "Jun & Momo Pre-Wedding",
     label: "Jun & Momo · Pre-Wedding",
     href: "https://nixramos.pixieset.com",
     tall: true,
+    position: "object-center",
   },
   {
-    src: "/images/daba%20daba%20anniversary.png",
+    src: "/images/daba-daba-anniversary.png",
     alt: "Daba Daba Anniversary",
     label: "Daba Daba · Anniversary",
     href: "https://nixramos.pixieset.com",
+    position: "object-top",
   },
   {
-    src: "/images/Wellness%20Retreat.jpg",
+    src: "/images/wellness-retreat.jpg",
     alt: "Wellness Retreat",
     label: "Wellness Retreat",
     href: "https://nixramos.pixieset.com",
+    position: "object-center",
   },
   {
     src: "/images/Pickleball.png",
     alt: "Pickleball",
     label: "Pickleball",
     href: "https://nixramos.pixieset.com",
+    position: "object-center",
   },
   {
-    src: "/images/Daba%20-%20Sunrise%20Yoga%20for%20a%20Cause.png",
+    src: "/images/daba-sunrise-yoga.png",
     alt: "Daba · Sunrise Yoga for a Cause",
     label: "Daba · Sunrise Yoga for a Cause",
     href: "https://nixramos.pixieset.com",
-  },
-  {
-    src: "/images/Mama%20Joy.png",
-    alt: "Mama Joy",
-    label: "Mama Joy",
-    href: "https://nixramos.pixieset.com",
-    wide: true,
+    position: "object-center",
   },
 ];
 
@@ -68,12 +66,12 @@ export default function WorkGrid() {
         </a>
       </div>
 
-      {/* Grid: 3 cols — first item spans 2 rows, last item spans full width */}
+      {/* Grid: 3 cols, 2 rows — first item spans both rows */}
       <div
         className="grid gap-1.5"
         style={{
           gridTemplateColumns: "1.5fr 1fr 1fr",
-          gridTemplateRows: "280px 200px 200px",
+          gridTemplateRows: "280px 200px",
         }}
       >
         {works.map((w, i) => (
@@ -83,17 +81,13 @@ export default function WorkGrid() {
             target="_blank"
             rel="noopener noreferrer"
             className="relative overflow-hidden group block"
-            style={
-              w.tall ? { gridRow: "span 2" } :
-              w.wide ? { gridColumn: "1 / -1" } :
-              {}
-            }
+            style={w.tall ? { gridRow: "span 2" } : {}}
           >
             <Image
               src={w.src}
               alt={w.alt}
               fill
-              className="object-cover group-hover:scale-105 transition-transform duration-700"
+              className={`object-cover ${w.position} group-hover:scale-105 transition-transform duration-700`}
             />
 
             {/* Hover overlay */}
